@@ -186,8 +186,8 @@ small {
 hr {
   border:0;
   background:var(--clr-splitter-blockquote-and-section);
-  height:1px;
-  width:30%;
+  height:2px;
+  width:100%;
   margin:10px auto 30px;
 }
 
@@ -314,3 +314,23 @@ footer {
   }
 }
 
+// CUSTOM
+
+div.card {
+  border-color: var(--clr-splitter-blockquote-and-section);
+  border-width: 2px;
+  border-style: solid;
+  //background-color: var(--clr-splitter-blockquote-and-section);
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: border-color 0.5s ease-out;
+}
+
+div.cards-container {
+  margin-bottom: 20px;
+  div.card:hover {
+    border-color: var(--clr-a-text-hvr);
+  }
+}

@@ -18,7 +18,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    <link rel="preload" href="{{site.logo | relative_url}}" as="image">
+    <link rel="preload" href="{{site.logo}}" as="image">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -29,7 +29,7 @@
       <div class="sidebar">
         <header>
           {% if site.logo %}
-            <img class="img-circle" rel="prefetch" src="{{site.logo | relative_url}}" alt="Logo">
+            <img class="img-circle" rel="prefetch" src="{{site.logo}}" alt="Logo">
           {% endif %}
 
           {% if site.blank_title %}

@@ -1,12 +1,19 @@
+# Sidebar info
 title: Anton Jørgensen
-logo: /assets/img/logo.png
+logo: https://avatars.githubusercontent.com/u/33018671?v=4
 email: anton2410@gmail.com
-description: Test
+#description: Test2
+github: https://github.com/AntonJorg/
+blog: https://blog.antonjorg.com
+linkedin: https://www.linkedin.com/in/anton-jorg/
 show_downloads: false
-google_analytics: UA-108144808-1
-theme: jekyll-theme-minimalist
+
+# Appearance
+favicon: true
+remote_theme: BDHU/minimalist
 color-scheme: auto
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jemoji
+  - jekyll-remote-theme
