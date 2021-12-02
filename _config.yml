@@ -11,7 +11,7 @@ show_downloads: false
 # Appearance
 favicon: true
 remote_theme: BDHU/minimalist
-color-scheme: auto
+color-scheme: dark
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
