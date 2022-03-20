@@ -1,13 +1,22 @@
-$(document).ready(function(){
-    $(".card-body").addClass("collapsed");
 
-    $(".card").click(function(){
-      var elem = $(this).find(".card-body");
+var coll = document.getElementsByClassName("card");
+var i;
 
-      if (elem.hasClass("expanded")) {
-        elem.removeClass("expanded").addClass("collapsed");
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.querySelector('.card-body');
+    if (content !== null) {
+      var arrow = this.querySelector('.card-expand');
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+        content.style.marginTop = '0px';
+        arrow.style.visibility = 'visible';
       } else {
-        elem.removeClass("collapsed").addClass("expanded");
-      }
-    });
+        content.style.maxHeight = content.scrollHeight + "px";
+        content.style.marginTop = '15px';
+        arrow.style.visibility = 'hidden';
+      }    
+    }
   });
+}

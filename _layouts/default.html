@@ -46,7 +46,9 @@
             <p class="addr">&#x2709;&nbsp;{{ site.email }}</p>
           {% endif %}
 
-          <p>{{ site.description | default: site.github.project_tagline }}</p>
+          {% if site.description %}
+          <p> {{ site.description }} </p>
+          {% endif %}
 
           {% include sidebar.html %}
 

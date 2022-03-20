@@ -370,8 +370,10 @@ div.card-title {
   }
 }
 
-div.card-body {
-  transition: height 5s, opacity 0.5s;
+div.card-body { 
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out, margin-top 0.2s ease-out;
 }
 
 div.card-body.expanded {

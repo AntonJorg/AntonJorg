@@ -2,6 +2,7 @@
 layout: default
 ---
 
+
 # Experience
 ---
 
@@ -9,7 +10,7 @@ layout: default
     <div class="card">
         <div class="card-header">
             <div class="card-title">
-                <h2> Student Data Analyst </h2>
+                <h2> Student Data Science Consultant </h2>
                 <h4> Valtech_eCapacity, <i>2021 - present</i> </h4>
             </div>
             <img class="card-logo" src="assets/img/card_logos/ecap_logo.png" alt="Valtech_eCapacity Logo">
@@ -17,22 +18,10 @@ layout: default
         <div class="card-expand"><i class="fa fa-angle-down"></i></div>
         <div class="card-body">
             <div class="card-text">
-                Lots of card text
-                Lots of card text
-                Lots of card text
-                Lots of card text
-                Lots of card text
-                Lots of card text
-                Lots of card text
-                Lots of card text
-                Lots of card text
-                Lots of card text
-                v
-                Lots of card text
-                Lots of card textLots of card textLots of card textLots of card textLots of card text
-                Lots of card text
-                Lots of card text
-                Lots of card textLots of card textLots of card textLots of card textLots of card textsldkmflskdmfLots of card textlksmdflkmsd
+                I work as part of the Data Science/Engineering team providing
+                insights to companies by analyzing their customer data. Main
+                technologies that i use include Python, Google Cloud Platform,
+                Adobe Analytics, and SQL.
             </div>
         </div>
     </div>
@@ -44,8 +33,12 @@ layout: default
             </div>
             <img class="card-logo" src="assets/img/card_logos/DTU_LOGO.jpg" alt="DTU Logo">
         </div>
+        <div class="card-expand"><i class="fa fa-angle-down"></i></div>
         <div class="card-body">
             <div class="card-text">
+                Spent multiple semesters as a teaching assistant in an introductory
+                programming course. The focus was on data processing and general
+                algorithmic thinking.
             </div>
         </div>
     </div>
@@ -57,8 +50,12 @@ layout: default
             </div>
             <img class="card-logo" src="assets/img/card_logos/foodinfo_logo.jpg" alt="FoodInfo Logo">
         </div>
+        <div class="card-expand"><i class="fa fa-angle-down"></i></div>
         <div class="card-body">
             <div class="card-text">
+                Developed a prototype app using the Ionic framework. The app
+                served nutrition information and relevant offers from nearby
+                stores using the FoodInfo API.
             </div>
         </div>
     </div>
@@ -76,8 +73,12 @@ layout: default
             </div>
             <img class="card-logo" src="assets/img/card_logos/DTU_LOGO.jpg" alt="DTU Logo">
         </div>
+        <div class="card-expand"><i class="fa fa-angle-down"></i></div>
         <div class="card-body">
             <div class="card-text">
+                Dummy card-text
+                Dummy card-text
+                Dummy card-text
             </div>
         </div>
     </div>
@@ -89,8 +90,12 @@ layout: default
             </div>
             <img class="card-logo" src="assets/img/card_logos/pandora_logo.jpg" alt="Pandora Logo">
         </div>
+        <div class="card-expand"><i class="fa fa-angle-down"></i></div>
         <div class="card-body">
             <div class="card-text">
+                Dummy card-text
+                Dummy card-text
+                Dummy card-text
             </div>
         </div>
     </div>
@@ -102,8 +107,12 @@ layout: default
             </div>
             <img class="card-logo" src="assets/img/card_logos/DTU_LOGO.jpg" alt="DTU Logo">
         </div>
+        <div class="card-expand"><i class="fa fa-angle-down"></i></div>
         <div class="card-body">
             <div class="card-text">
+                Dummy card-text
+                Dummy card-text
+                Dummy card-text
             </div>
         </div>
     </div>
@@ -120,10 +129,6 @@ layout: default
                 <h4> Technical University of Denmark, <i>2019 - 2022</i> </h4>
             </div>
             <img class="card-logo" src="assets/img/card_logos/DTU_LOGO.jpg" alt="DTU Logo">
-        </div>
-        <div class="card-body">
-            <div class="card-text">
-            </div>
         </div>
     </div>
 </div>
