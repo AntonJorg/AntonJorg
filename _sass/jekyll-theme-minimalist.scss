@@ -328,9 +328,69 @@ div.card {
   transition: border-color 0.5s ease-out;
 }
 
-div.cards-container {
-  margin-bottom: 20px;
-  div.card:hover {
-    border-color: var(--clr-a-text-hvr);
+div.card-expand {
+  visibility: hidden;
+  height: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transition: height 0.2s;
+
+  i {
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.2s;
   }
 }
+
+div.card:hover {
+  border-color: var(--clr-a-text-hvr);
+  div.card-expand {
+    visibility: visible;
+    height: 0px;
+    i {
+      opacity: 1;
+    }
+  }
+}
+
+div.cards-container {
+  margin-bottom: 20px;
+}
+
+div.card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.card-title {
+  width: 75%;
+  h2, h4 {
+    width: 100%;
+  }
+}
+
+div.card-body {
+  transition: height 5s, opacity 0.5s;
+}
+
+div.card-body.expanded {
+  height: auto;
+  opacity: 1;
+  margin-top: 40px;
+}
+
+div.card-body.collapsed {
+  height: 0px;
+  opacity: 0;
+  margin-top: 0px;
+}
+
+img.card-logo {
+  width: 86px;
+  height: 86px;
+  border-radius: 20px;
+  vertical-align: top;
+}
+
+
