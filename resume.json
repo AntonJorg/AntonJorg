@@ -1,20 +1,19 @@
 {
-  "image": "images/example.jpg",
-  "name": "Name Namerson",
-  "website": "https://www.example.com",
-  "email": "email@example.com",
-  "phone": "+00 000 000 000",
-  "github": "Username",
-  "linkedin": "Username",
+  "image": "https://avatars.githubusercontent.com/u/33018671?v=4",
+  "name": "Anton Jørgensen",
+  "website": "https://www.antonjorg.com",
+  "email": "anton2410@gmail.com",
+  "phone": "+45 4239 1340",
+  "github": "AntonJorg",
+  "linkedin": "Anton-Jorg",
   "summary": {
-    "short": "Short summary for the website.",
-    "long": "This longer summary will show up in the resume if present."
+    "short": "Aspiring Artificial Intelligence Engineer"
   },
   "links": [
     {
-      "title": "Custom Link",
+      "title": "Blog",
       "icon": "fas fa-feather-alt",
-      "url": ""
+      "url": "https://blog.antonjorg.com"
     }
   ],
   "sections": [
@@ -23,37 +22,37 @@
       "pdfFormatStyle": "work",
       "content": [
         {
-          "title": "Number Cruncher",
-          "organization": "Corpo Ltd.",
+          "title": "Student Data Science Consultant",
+          "organization": "Valtech eCapacity",
           "date": {
-            "start": "2020",
+            "start": "2021",
             "until": "Present"
           },
-          "description": "Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.",
-          "image": "example.jpg",
+          "description": "I work as part of the Data Science/Engineering team providing insights to companies by analyzing their customer data. Main technologies that i use include Python, Google Cloud Platform, Adobe Analytics, and SQL.",
+          "image": "ecapacity.png",
           "showInPdf": true
         },
         {
-          "title": "Pencil Pusher",
-          "organization": "Firm Inc.",
+          "title": "Python, R, and Matlab TA",
+          "organization": "Technical University of Denmark",
           "date": {
-            "start": "2016",
-            "until": "2020"
+            "start": "2019",
+            "until": "2022"
           },
-          "description": "Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.",
-          "image": "example.jpg",
+          "description": "Spent multiple semesters as a teaching assistant in an introductory programming course. The focus was on data processing and general algorithmic thinking.",
+          "image": "dtu.jpg",
           "showInPdf": true
         },
         {
-          "title": "Job That I Want On My Website, But Not My Resume",
-          "organization": "Arbitrary Burger Chain",
+          "title": "Junior Developer",
+          "organization": "FoodInfo",
           "date": {
-            "start": "2015",
-            "until": "2016"
+            "start": "2017",
+            "until": "2019"
           },
-          "description": "Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.",
-          "image": "example.jpg",
-          "showInPdf": false
+          "description": "Developed a prototype app using the Ionic framework. The app served nutrition information and relevant offers from nearby stores using the FoodInfo API.",
+          "image": "foodinfo.jpg",
+          "showInPdf": true
         }
       ]
     },
@@ -62,18 +61,70 @@
       "pdfFormatStyle": "project",
       "content": [
         {
-          "title": "Built 9001 Paper Airplanes",
-          "organization": "World Paper Plane Association",
+          "title": "A Generalised Approach to Search Algorithms in Games",
+          "organization": "Technical University of Denmark",
           "date": {
-            "start": "Fall 2020"
+            "start": "Fall 2022"
           },
-          "description": "Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.",
-          "image": "example.jpg",
+          "description": "I presented a unified framework for implementing adversarial search algorithms, e.g. MiniMax and MCTS, with the aim of facilitating research, education, and open source collaboration in the field. A side effect of the framework is that it introduces an 'agent space' that allows for automated search for strong adversarial agents.",
+          "image": "dtu.jpg",
           "showInPdf": true,
           "link": {
-            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-            "title": "Video Demo"
+            "url": "https://github.com/AntonJorg/bachelor-project",
+            "title": "GitHub Repo"
           }
+        },
+        {
+          "title": "YOLO Real-Time Helmet Detection",
+          "organization": "Technical University of Denmark",
+          "date": {
+            "start": "Fall 2021"
+          },
+          "description": "We trained the You Only Look Once object detection model to detect the helmet usage of motorcycle and scooter users in a dataset recorded in developing countries. A positional encoding was used to deal with the many classes resulting from up to five people on each vehicle, each either wearing or not wearing a helmet.",
+          "image": "dtu.jpg",
+          "showInPdf": true,
+          "link": {
+            "url": "https://github.com/AntonJorg/02456-yolo",
+            "title": "GitHub Repo"
+          }
+        },
+        {
+          "title": "Jewellery Recommendation System for e-Commerce using CBIR",
+          "organization": "Technical University of Denmark",
+          "date": {
+            "start": "Spring 2021"
+          },
+          "description": "We developed a product recommendation system for Pandora jewellery using two approaches; an autoencoder and a triplet ranking network. This was paired with an object extraction model from Facebook Research, which resulted in a fully functional pipeline from input image to recommendations.",
+          "image": "pandora.jpg",
+          "showInPdf": true,
+          "link": {
+            "url": "https://github.com/natashanorsker/fagprojekt",
+            "title": "GitHub Repo"
+          }
+        },
+        {
+          "title": "University Course Base Analysis",
+          "organization": "Technical University of Denmark",
+          "date": {
+            "start": "Spring 2022"
+          },
+          "description": "We built a webscraper to scrape the contents of all courses listed on The DTU Course Base. Using a TF-IDF analysis we found the words that best described each course, and used these shared words to form a large network of courses. The graph can be explored in a 3D space, and shows a high degree of clustering for subjectively similar courses. ",
+          "image": "dtu.jpg",
+          "showInPdf": false,
+          "link": {
+            "url": "https://r0ner.github.io/comsosci-assignments/",
+            "title": "Link to Demo"
+          }
+        },
+        {
+          "title": "Multi Agent Q-Learning",
+          "organization": "Technical University of Denmark",
+          "date": {
+            "start": "Spring 2020"
+          },
+          "description": "By making a Q-learning agent train against itself in a spaceship dogfighting game we programmed from scratch, we managed to raise the agents' performance to a level where it regularly beat human opponents. ",
+          "image": "dtu.jpg",
+          "showInPdf": false
         }
       ]
     },
@@ -82,13 +133,13 @@
       "pdfFormatStyle": "education",
       "content": [
         {
-          "title": "Fancy Sounding Degree",
-          "organization": "Elite University",
+          "title": "BSc. Artificial Intelligence and Data",
+          "organization": "Technical University of Denmark",
           "date": {
-            "start": "2013",
-            "until": "2016"
+            "start": "2019",
+            "until": "2022"
           },
-          "image": "example.jpg",
+          "image": "dtu.jpg",
           "showInPdf": true
         }
       ]
@@ -96,20 +147,23 @@
   ],
   "skills": [
     {
-      "name": "Human things",
+      "name": "AI and Data Science",
       "skills": [
-        "Walking",
-        "Smalltalk",
-        "Existential dread"
+        "Machine Learning",
+        "Deep Learning",
+        "Reinforcement Learning",
+        "Symbolic AI"
       ]
     },
     {
       "name": "Tools",
       "skills": [
-        "Hammer",
-        "Chainsaw",
-        "Pipe cleaner",
-        "Frying pan"
+        "Python",
+        "PyTorch (Lightning)",
+        "Pandas",
+        "Google Cloud Platform",
+        "TypeScript",
+        "React"
       ]
     }
   ]
