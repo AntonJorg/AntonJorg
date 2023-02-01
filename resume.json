@@ -150,16 +150,17 @@
     {
       "name": "AI",
       "skills": [
-        "Deep-, Machine-, and Reinforcement-Learning",
+        "Deep Learning",
         "Symbolic AI",
-        "Adversarial Search",
-        "Monte Carlo Methods"
+        "Multi Agent Planning",
+        "Adversarial Search"
       ]
     },
     {
       "name": "Data Science",
       "skills": [
         "Statistical Analysis",
+        "Machine Learning",
         "PCA",
         "Clustering",
         "Visualization"
