@@ -7,8 +7,8 @@
   "github": "AntonJorg",
   "linkedin": "Anton-Jorg",
   "summary": {
-    "short": "Aspiring Artificial Intelligence Engineer",
-    "long": "I am an aspiring artificial intelligence engineer who enjoys theoretically challenging projects where I can be creative in my solution process. Though I am perfectly capable of working on my own, my time in a consultancy has taught me a lot about the value of efficient teamwork and clear communication."
+    "short": "Artificial Intelligence Engineer",
+    "long": "I am an artificial intelligence engineer who enjoys theoretically challenging projects where I can be creative in my solution process. Though I am perfectly capable of working on my own, my time in a consultancy has taught me a lot about the value of efficient teamwork and clear communication."
   },
   "links": [
     {
@@ -23,13 +23,13 @@
       "pdfFormatStyle": "work",
       "content": [
         {
-          "title": "Student Data Science Consultant",
+          "title": "Data Science Consultant",
           "organization": "Valtech eCapacity",
           "date": {
             "start": "2021",
             "until": "Present"
           },
-          "description": "I work as part of the Data Science/Engineering team providing insights to companies by analyzing their customer data. Main technologies that i use include Python, Google Cloud Platform, Adobe Analytics, and SQL.",
+          "description": "I work as part of the Data Science/Engineering team providing business insights to companies by analyzing their customer data. Main technologies that i use include Python, Google Cloud Platform, Adobe Analytics, and SQL.",
           "image": "ecapacity.png",
           "showInPdf": true
         },
@@ -42,7 +42,7 @@
           },
           "description": "Spent multiple semesters as teaching assistant in courses ranging from introductory programming to symbolic AI.",
           "image": "dtu.jpg",
-          "showInPdf": true
+          "showInPdf": false
         },
         {
           "title": "Junior Developer",
@@ -133,6 +133,16 @@
       "title": "Education",
       "pdfFormatStyle": "education",
       "content": [
+        {
+          "title": "MSc. Human Centered Artificial Intelligence",
+          "organization": "Technical University of Denmark",
+          "date": {
+            "start": "2023",
+            "until": "2025"
+          },
+          "image": "dtu.jpg",
+          "showInPdf": true
+        },
         {
           "title": "BSc. Artificial Intelligence and Data",
           "organization": "Technical University of Denmark",
