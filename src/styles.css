@@ -1,4 +1,6 @@
-:root{
+/* Nord palette — nord0-3 (Polar Night), nord4-6 (Snow Storm),
+   nord7-10 (Frost), nord11-15 (Aurora). */
+:root {
   --dark1:  #2e3440;
   --dark2:  #3b4252;
   --dark3:  #434c5e;
@@ -15,181 +17,475 @@
   --yellow: #ebcb8b;
   --green:  #a3be8c;
   --purple: #b48ead;
+
+  /* Role aliases — rules below reference these, not the palette directly. */
+  --bg:          var(--dark1);
+  --bg-inset:    var(--dark2);
+  --fg:          var(--light3);
+  --fg-muted:    var(--light1);
+  --fg-subtle:   var(--blue3);
+  --accent:      var(--blue2);
+  /* Hover brightens rather than darkens. The old stylesheet used --blue4
+     here, but that is a light-background color: 3.10:1 on --dark1, below
+     AA. --light3 is 10.84:1. */
+  --accent-hover: var(--light3);
+  --rule:        var(--dark4);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 body {
-  font: 15px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: var(--light3);
-  background-color: var(--dark1);
+  font: 15px/1.6 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  padding: 50px;
-  display: flex;
-  justify-content: center;
+  color: var(--fg);
+  background-color: var(--bg);
+  margin: 0;
+  padding: 3rem 1.5rem;
 }
 
-.wrapper {
-  width: 860px;
+/* ---------------------------------------------------------------- layout */
+
+.layout {
+  display: grid;
+  grid-template-columns: 17rem minmax(0, 1fr);
+  gap: 4rem;
+  max-width: 64rem;
+  margin-inline: auto;
 }
 
-.content {
-  width: 610px;
-  float: right;
+@media (max-width: 48rem) {
+  body { padding: 2rem 1.25rem; }
+
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
 }
 
-.sidebar {
-  position: fixed;
-  width: 185px;
-  float: left;
-}
-
-div.button {
-  background-color: var(--blue2);
-  border-radius: 5px;
-}
-
-a:hover div.button, a:focus div.button {
-  background-color: var(--blue4);
-}
-
-a div p {
-  color: var(--light3);
-  padding: 10px;
-  text-align: center;
-}
-
-div.card {
-  border-color: var(--dark4);
-  border-width: 2px;
-  border-style: solid;
-  padding: 20px;
-  border-radius: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  transition: border-color 0.5s ease-out;
-}
-
-div.card-expand {
-  visibility: hidden;
-  height: 0px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  transition: height 0.2s;
-}
-
-div.card-expand i {
-  font-size: 20px;
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-
-div.card:hover {
-  border-color: var(--blue2);
-}
-
-div.card:hover div.card-expand {
-  visibility: visible;
-  height: 0px;
-}
-
-div.card:hover div.card-expand i {
-  opacity: 1;
-}
-
-div.cards-container {
-  margin-bottom: 20px;
-}
-
-div.card-header {
-  display: flex;
-  justify-content: space-between;
-}
-
-div.card-title {
-  width: 75%;
-}
-
-div.card-title i {
-  margin-left: 6px;
-}
-
-div.card-title h2, h4 {
-  width: 100%;
-}
-
-div.card-body { 
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out, margin-top 0.2s ease-out;
-}
-
-div.card-body.expanded {
-  height: auto;
-  opacity: 1;
-  margin-top: 40px;
-}
-
-div.card-body.collapsed {
-  height: 0px;
-  opacity: 0;
-  margin-top: 0px;
-}
-
-img.card-logo {
-  width: 86px;
-  height: 86px;
-  border-radius: 20px;
-  vertical-align: top;
-}
+/* ------------------------------------------------------------- typography */
 
 h1, h2, h3, h4, h5, h6 {
-  color: var(--light3);
-  margin:0 0 20px;
+  color: var(--fg);
+  line-height: 1.2;
+  margin: 0 0 1rem;
 }
+
+h1 { font-size: 1.75rem; }
+h2 { font-size: 1.35rem; }
+h3 { font-size: 1.1rem; }
 
 p, ul, ol, table, pre, dl {
-  margin:0 0 20px;
-}
-
-ul {
-  padding: 0;
-  list-style-type: none;
-}
-
-li {
-  margin-bottom: 5px;
-}
-
-li i {
-  margin-right: 5px;
-}
-
-h1, h2, h3 {
-  line-height:1.1;
-}
-
-h1 {
-  font-size:32px;
+  margin: 0 0 1.25rem;
 }
 
 a {
-  color: var(--blue2);
+  color: var(--accent);
   text-decoration: none;
 }
 
 a:hover, a:focus {
-  color: var(--blue4);
-}
-
-header img {
-  width: 100%;
-  border-radius: 5px;
+  color: var(--accent-hover);
+  text-decoration: underline;
 }
 
 hr {
-  border:0;
-  background: var(--dark4);
-  height:2px;
-  width:100%;
-  margin:10px auto 30px;
+  border: 0;
+  background: var(--rule);
+  height: 2px;
+  width: 100%;
+  margin: 1rem auto 2rem;
+}
+
+/* --------------------------------------------------------------- sidebar */
+
+/* Deliberately not sticky or fixed: with Experience and Education the
+   sidebar can exceed the viewport, and a pinned column taller than the
+   viewport puts its lower entries permanently out of reach. */
+.sidebar {
+  font-size: 0.9rem;
+}
+
+.sidebar header {
+  margin-bottom: 2rem;
+}
+
+.sidebar header img {
+  width: 100%;
+  border-radius: 5px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.sidebar header .avatar {
+  display: block;
+}
+
+.tagline {
+  color: var(--fg-muted);
+  margin: 0;
+}
+
+.bio {
+  color: var(--fg-muted);
+  margin: 0;
+}
+
+/* <address> is the correct home for the author's own contact details —
+   email and profile links alike — so it wraps the whole list. */
+.sidebar address {
+  font-style: normal;
+  margin: 0;
+}
+
+.contacts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contacts li {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.contacts li + li {
+  margin-top: 0.45rem;
+}
+
+.contacts a {
+  overflow-wrap: anywhere;
+}
+
+/* Decorative: every icon sits beside its own text label, so they are
+   aria-hidden and inherit color rather than carrying meaning. */
+.icon {
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  color: var(--fg-subtle);
+}
+
+.resume-section {
+  margin-bottom: 2rem;
+}
+
+.resume-section h2 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--fg-subtle);
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 1rem;
+}
+
+.resume-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.resume-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+}
+
+.resume-list li + li {
+  margin-top: 1.1rem;
+}
+
+/* Decorative only — the organization name is right there in the adjacent
+   text, so these carry alt="" and are hidden from screen readers. */
+.resume-list .logo {
+  flex: 0 0 auto;
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  object-fit: cover;
+  background: var(--bg-inset);
+}
+
+.resume-list .entry {
+  min-width: 0;
+}
+
+/* Override the loose global paragraph rhythm — résumé entries are three
+   tightly-grouped lines, not separate blocks. */
+.resume-list h3 {
+  font-size: 0.95rem;
+  margin: 0 0 0.15rem;
+}
+
+.resume-list .org {
+  color: var(--fg-muted);
+  margin: 0;
+}
+
+/* Organization links keep the muted body color instead of the bright link
+   blue — five blue lines in a row would fight the article list for
+   attention. A faint underline marks them as clickable. */
+.resume-list .org a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+  text-underline-offset: 2px;
+}
+
+.resume-list .org a:hover,
+.resume-list .org a:focus {
+  color: var(--accent);
+  text-decoration-color: currentColor;
+}
+
+.resume-list .dates {
+  color: var(--fg-subtle);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* --------------------------------------------------------- article index */
+
+/* Two copies of the name stacked in one grid cell, so they share an origin
+   and a baseline: "Anton Jorg" lands exactly on "Anton Jørg", and the blue
+   reveals the short name inside the long one. Both layers are aria-hidden
+   and the wrapper carries role="img" + aria-label, so screen readers get
+   the name once rather than twice. */
+.wordmark {
+  display: grid;
+  justify-items: start;
+  margin: 0 0 2.5rem;
+  font-size: clamp(2.75rem, 8vw, 4.5rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+}
+
+.wordmark > span {
+  grid-area: 1 / 1;
+}
+
+/* Deliberately low contrast (1.69:1) — the full name is a ghost behind the
+   blue. Safe to sit below AA because both painted layers are aria-hidden
+   and .visually-hidden carries the real text, so nothing that must be read
+   is rendered faintly. */
+.wordmark .ghost {
+  color: var(--dark4);
+}
+
+.wordmark .fore {
+  color: var(--blue2);
+}
+
+/* Removed from the page but left in the accessibility tree — this is what
+   makes the stacked wordmark announce as a single "Anton Jørgensen"
+   heading instead of the doubled text a sighted reader sees. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+main > h2 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--fg-subtle);
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 1.75rem;
+}
+
+.teaser + .teaser {
+  margin-top: 2.25rem;
+}
+
+.teaser h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.teaser > time {
+  display: block;
+  color: var(--fg-subtle);
+  font-size: 0.85rem;
+  margin-bottom: 0.6rem;
+}
+
+.teaser p {
+  color: var(--fg-muted);
+  margin: 0;
+}
+
+/* ---------------------------------------------------------- article page */
+
+/* Article pages have no sidebar — one centered column at a comfortable
+   measure rather than the two-column .layout grid. */
+.layout-single {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 44rem;
+}
+
+/* Without a sidebar there is no way home from the top of a long article,
+   so the page opens with its own link back. */
+.article-nav {
+  font-size: 0.85rem;
+  margin-bottom: 2.5rem;
+}
+
+.article-body h1 {
+  margin-bottom: 0.25rem;
+}
+
+.article-body > header time {
+  display: block;
+  color: var(--fg-subtle);
+  font-size: 0.85rem;
+  margin-bottom: 2rem;
+}
+
+.article-body h2,
+.article-body h3 {
+  margin-top: 2rem;
+}
+
+.article-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.article-body code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background: var(--bg-inset);
+  border-radius: 3px;
+  padding: 0.1em 0.35em;
+}
+
+.article-body pre {
+  background: var(--bg-inset);
+  border-radius: 5px;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.article-body pre code {
+  background: none;
+  padding: 0;
+}
+
+/* ------------------------------------------------- syntax highlighting */
+
+/* Pygments token classes, emitted at build time by the codehilite
+   extension — .codehilite only ever wraps a fenced code block, so these
+   need no .article-body scope.
+
+   Nord's own syntax roles are kept where they are legible on --bg-inset
+   and moved where they are not: nord3 comments are 1.36:1 against this
+   background, so comments take --fg-subtle (3.74:1) plus italics, and
+   keywords move off --fg-subtle to --accent (5.03:1) to stay distinct
+   from them. */
+
+/* Comment, and its Hashbang/Multiline/Preproc/Single/Special variants. */
+.codehilite .c, .codehilite .ch, .codehilite .cm, .codehilite .cp,
+.codehilite .cpf, .codehilite .c1, .codehilite .cs {
+  color: var(--fg-subtle);
+  font-style: italic;
+}
+
+/* Keyword, incl. Constant/Declaration/Namespace/Pseudo/Reserved, plus
+   word-operators (and, not, in) and markup tag names. */
+.codehilite .k, .codehilite .kc, .codehilite .kd, .codehilite .kn,
+.codehilite .kp, .codehilite .kr, .codehilite .ow, .codehilite .nt {
+  color: var(--accent);
+}
+
+/* Names that denote a callable or a type: functions, classes, builtins,
+   exceptions, namespaces, decorators' targets, markup attributes. */
+.codehilite .nf, .codehilite .fm, .codehilite .nc, .codehilite .nn,
+.codehilite .ne, .codehilite .nb, .codehilite .bp, .codehilite .kt,
+.codehilite .na {
+  color: var(--blue1);
+}
+
+/* Decorators and annotations. */
+.codehilite .nd, .codehilite .nl {
+  color: var(--orange);
+}
+
+/* String, and its Affix/Backtick/Char/Doc/Double/Heredoc/Regex/Single/
+   Symbol variants. */
+.codehilite .s, .codehilite .sa, .codehilite .sb, .codehilite .sc,
+.codehilite .dl, .codehilite .sd, .codehilite .s2, .codehilite .sh,
+.codehilite .sr, .codehilite .s1, .codehilite .ss, .codehilite .sx {
+  color: var(--green);
+}
+
+/* Escapes and interpolations break out of the surrounding string —
+   \n and {name} should not read as literal text. */
+.codehilite .se, .codehilite .si {
+  color: var(--yellow);
+}
+
+/* Number, incl. Bin/Float/Hex/Integer/Long/Octal. */
+.codehilite .m, .codehilite .mb, .codehilite .mf, .codehilite .mh,
+.codehilite .mi, .codehilite .il, .codehilite .mo {
+  color: var(--purple);
+}
+
+/* Operators and punctuation sit a step below plain identifiers so the
+   names carry the eye. */
+.codehilite .o, .codehilite .p {
+  color: var(--fg-muted);
+}
+
+/* Generic tokens, produced by the diff and console lexers. */
+.codehilite .gd { color: var(--red); }
+.codehilite .gi { color: var(--green); }
+.codehilite .gh, .codehilite .gu { color: var(--accent); }
+.codehilite .gp { color: var(--fg-subtle); }
+.codehilite .ge { font-style: italic; }
+.codehilite .gs { font-weight: 700; }
+
+/* Whatever the lexer could not tokenize. Underlined as well as coloured:
+   --red is only 2.46:1 here, too faint to carry the signal alone. */
+.codehilite .err {
+  color: var(--red);
+  text-decoration: underline;
+}
+
+.article-body blockquote {
+  margin: 0 0 1.25rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--rule);
+  color: var(--fg-muted);
+}
+
+.article-body table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.article-body th,
+.article-body td {
+  border-bottom: 1px solid var(--rule);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+.back {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
 }

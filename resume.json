@@ -2,7 +2,7 @@
   "image": "https://avatars.githubusercontent.com/u/33018671?v=4",
   "name": "Anton Jørgensen",
   "website": "https://www.antonjorg.com",
-  "email": "anton2410@gmail.com",
+  "email": "aj@antonjorg.com",
   "phone": "+45 4239 1340",
   "github": "AntonJorg",
   "linkedin": "Anton-Jorg",
@@ -10,49 +10,31 @@
     "short": "Artificial Intelligence Engineer",
     "long": "I am an artificial intelligence engineer who enjoys theoretically challenging projects where I can be creative in my solution process. Though I am perfectly capable of working on my own, my time in a consultancy has taught me a lot about the value of efficient teamwork and clear communication."
   },
-  "links": [
-    {
-      "title": "Blog",
-      "icon": "fas fa-feather-alt",
-      "url": "https://blog.antonjorg.com"
-    }
-  ],
+  "links": [],
   "sections": [
     {
       "title": "Experience",
       "pdfFormatStyle": "work",
       "content": [
         {
+          "title": "CEO & Co-founder",
+          "organization": "Essential Robotics",
+          "date": {
+            "start": "2023",
+            "until": "Present"
+          },
+          "image": "essentialrobotics.png",
+          "showInPdf": true
+        },
+        {
           "title": "Data Science Consultant",
           "organization": "Valtech eCapacity",
           "date": {
             "start": "2021",
-            "until": "Present"
-          },
-          "description": "I work as part of the Data Science/Engineering team providing business insights to companies by analyzing their customer data. Main technologies that i use include Python, Google Cloud Platform, Adobe Analytics, and SQL.",
-          "image": "ecapacity.png",
-          "showInPdf": true
-        },
-        {
-          "title": "Teaching Assistant",
-          "organization": "Technical University of Denmark",
-          "date": {
-            "start": "2019",
             "until": "2023"
           },
-          "description": "Spent multiple semesters as teaching assistant in courses ranging from introductory programming to symbolic AI.",
-          "image": "dtu.jpg",
-          "showInPdf": false
-        },
-        {
-          "title": "Junior Developer",
-          "organization": "FoodInfo",
-          "date": {
-            "start": "2017",
-            "until": "2019"
-          },
-          "description": "Developed a prototype app using the Ionic framework. The app served nutrition information and relevant offers from nearby stores using the FoodInfo API.",
-          "image": "foodinfo.jpg",
+          "description": "I worked as part of the Data Science/Engineering team providing business insights to companies by analyzing their customer data. Main technologies that i used include Python, Google Cloud Platform, Adobe Analytics, and SQL.",
+          "image": "ecapacity.png",
           "showInPdf": true
         }
       ]

@@ -1,51 +1,34 @@
 name: build
-on: [push]
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    env:
-      # Edit here with the names of your latex file and directory (can use ".")
-      DIR: build
-      FILE: cv
-    steps:
-      - name: Set up Git repository
-        uses: actions/checkout@v2
-      - name: Install Nim Compiler
-        uses: iffy/install-nim@v4
-      - name: Compile and run main
-        run: nimble install nim -y && nim c -r main.nim 
-      - name: Generate PDF
-        uses: dante-ev/latex-action@latest
-        with:
-          root_file: ${{ env.FILE }}
-          working_directory: ${{ env.DIR }}
-      - name: Move files
-        run: mkdir -p github_artifacts && mv ${{ env.DIR }}/* ./github_artifacts/
-      - name: Upload PDF as artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: site-content
-          path: ./github_artifacts/
-  deploy:
-    needs: [build]
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - uses: actions/download-artifact@v2
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
         with:
-          path: github_artifacts
-      - name: Move site content
-        run: mkdir -p github_deploy && mv github_artifacts/*/* github_deploy
-      - name: Clean Up
-        run: mv github_deploy/cv.pdf github_deploy/resume.pdf && rm github_deploy/cv.*
+          enable-cache: true
+
+      - name: Build site
+        run: uv run generator.py
+
+      # The only source of the custom domain — nothing in src/ contains a CNAME.
       - name: Add CNAME
-        run: echo 'antonjorg.com' > github_deploy/CNAME
-      - name: deploy on orphan branch
-        uses: peaceiris/actions-gh-pages@v3
+        run: echo 'antonjorg.com' > build/CNAME
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./github_deploy
+          publish_dir: ./build
           publish_branch: gh-pages
           force_orphan: true
-
